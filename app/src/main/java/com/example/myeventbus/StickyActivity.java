@@ -3,6 +3,7 @@ package com.example.myeventbus;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
@@ -30,9 +31,16 @@ public class StickyActivity extends AppCompatActivity {
     }
 
     @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)
-    public void refreshMessage(EventData eventData) {
-        Log.i(TAG, "method:Subscribe#refreshMessage#eventData=" + eventData);
-        mTvMessage.setText(eventData.getUserName() + ":\n\n" + eventData.getMessage());
+    public void refreshMessage(final EventData eventData) {
+        Log.i(TAG, "method:refreshMessage#eventData=" + eventData);
+        mTvMessage.setText("已经接收到 eventData=" + eventData.toString() + "， 延时3000毫秒刷新UI");
+        Log.i(TAG, "method:refreshMessage#已经接收到 eventData=" + eventData.toString() + "， 延时3000毫秒刷新UI");
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mTvMessage.setText(eventData.getUserName() + ":\n\n" + eventData.getMessage());
+            }
+        }, 3000);
     }
 
     @Override

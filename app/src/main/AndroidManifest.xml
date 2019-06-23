@@ -17,7 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".PostActivity" />
-        <activity android:name=".ProduceActivity" />
         <activity android:name=".StickyActivity" />
     </application>
 

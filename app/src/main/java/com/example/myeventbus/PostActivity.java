@@ -39,7 +39,7 @@ public class PostActivity extends AppCompatActivity {
                 EventData eventData = new EventData(userArray[uIndex], messageArray[mIndex]);
                 Log.i(TAG, "method:onCreate#mBtnSendEventData#onClick#eventData="+eventData);
                 EventBus.getDefault().post(eventData);
-                finish();
+//                finish();
             }
         });
     }
