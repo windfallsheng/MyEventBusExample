@@ -1,2 +1,2 @@
 # MyEventBusExample
-android eventbus MyEventBusExample
+android eventbus example
