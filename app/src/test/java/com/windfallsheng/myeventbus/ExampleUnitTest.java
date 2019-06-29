@@ -1,4 +1,4 @@
-package com.example.myeventbus;
+package com.windfallsheng.myeventbus;
 
 import org.junit.Test;
 

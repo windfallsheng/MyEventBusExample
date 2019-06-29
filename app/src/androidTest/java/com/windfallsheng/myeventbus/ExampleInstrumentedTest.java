@@ -1,4 +1,4 @@
-package com.example.myeventbus;
+package com.windfallsheng.myeventbus;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
