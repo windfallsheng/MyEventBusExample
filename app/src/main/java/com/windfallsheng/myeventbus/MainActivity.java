@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 final EventData eventData = new EventData(userArray[uIndex], messageArray[mIndex]);
                 Log.i(TAG, "method:onCreate#mBtnPostStickyEvent#onClick#eventData=" + eventData);
                 EventBus.getDefault().postSticky(eventData);
-                Log.i(TAG, "method:onCreate#mBtnPostStickyEvent#onClick#Post sticky finish.");
+                Log.i(TAG, "method:onCreate#mBtnPostStickyEvent#onClick#Post sticky event finish.");
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {

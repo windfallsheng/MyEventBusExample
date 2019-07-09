@@ -1,39 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#F6F6F6"
     tools:context="com.windfallsheng.myeventbus.MainActivity">
 
-    <Button
-        android:id="@+id/btn_jump_to_post"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_above="@+id/tv_message"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="90dp"
-        android:text="跳转到Post_Activity" />
-
-    <TextView
-        android:id="@+id/tv_message"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/grid_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Hello World!"
-        android:textSize="25dp" />
+        android:layout_margin="10dp"
+        android:background="#0000"
+        app:alignmentMode="alignBounds"
+        app:columnCount="1"
+        app:orientation="horizontal"
+        app:rowCount="6"
+        app:useDefaultMargins="false">
 
-    <Button
-        android:id="@+id/btn_post_sticky_event"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/tv_message"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
-        android:text="Post_Sticky_Event" />
+        <Button
+            android:id="@+id/btn_jump_to_post"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/selector_item_background"
+            android:text="跳转到Post_Activity"
+            app:layout_rowWeight="1" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_item_background"
+            android:padding="10dp"
+            app:layout_rowWeight="3">
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Hello World!"
+                android:textSize="25dp"
+                app:layout_rowWeight="3" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_post_sticky_event"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/selector_item_background"
+            android:text="Post_Sticky_Event"
+            app:layout_rowWeight="1" />
+
+    </android.support.v7.widget.GridLayout>
 
 </RelativeLayout>
