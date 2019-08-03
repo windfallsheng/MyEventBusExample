@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -56,10 +55,16 @@ public class MainActivity extends AppCompatActivity {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void refreshMessage(EventData eventData) {
+        Log.i(TAG, "method:refreshMessage#currentThread=" + Thread.currentThread());
         Log.i(TAG, "method:refreshMessage#eventData=" + eventData);
         mTvMessage.setText(eventData.getUserName() + ":\n\n" + eventData.getMessage());
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMessageEvent(String message) {
+        Log.i(TAG, "method:onMessageEvent#currentThread=" + Thread.currentThread());
+        Log.i(TAG, "method:onMessageEvent#message=" + message);
+    }
 
     @Override
     protected void onDestroy() {
