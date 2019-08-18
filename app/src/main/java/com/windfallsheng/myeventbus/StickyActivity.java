@@ -28,6 +28,7 @@ public class StickyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sticky);
         mTvMessage = (TextView) this.findViewById(R.id.tv_message);
         EventBus.getDefault().register(this);
+
     }
 
     @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)

@@ -13,7 +13,7 @@
         android:layout_centerInParent="true"
         android:layout_margin="5dp"
         app:alignmentMode="alignBounds"
-        app:columnCount="2"
+        app:columnCount="1"
         app:orientation="horizontal"
         app:rowCount="5"
         app:useDefaultMargins="false">
@@ -21,49 +21,14 @@
         <TextView
             android:id="@+id/textview_main"
             style="@style/Text_Bg_Normal"
-            android:text="MAIN"
+            android:text="Main"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <TextView
-            android:id="@+id/textview_main_thread"
+            android:id="@+id/textview_post"
             style="@style/Text_Bg_Normal"
-            android:text="MAIN\nTHREAD"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
-
-        <TextView
-            android:id="@+id/textview_posting"
-            style="@style/Text_Bg_Normal"
-            android:text="POSTING"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
-
-        <TextView
-            android:id="@+id/textview_posting_thread"
-            style="@style/Text_Bg_Normal"
-            android:text="POSTING\nTHREAD"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
-
-        <TextView
-            android:id="@+id/textview_main_ordered"
-            style="@style/Text_Bg_Normal"
-            android:text="MAIN_ORDERED"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
-
-        <TextView
-            android:id="@+id/textview_background"
-            style="@style/Text_Bg_Normal"
-            android:text="BACKGROUND"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
-
-        <TextView
-            android:id="@+id/textview_async"
-            style="@style/Text_Bg_Normal"
-            android:text="ASYNC"
+            android:text="Post"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
